@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Heading from './Heading';
+import UList from './ULlist';
+
+
+let name = 'sohaib';
+let currentYear = new Date().getFullYear();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Heading />
+      <UList />
+      <p>Created by {name}</p>
+      <p>Copyright © {currentYear}</p>
+
+      <h3>below i have inserted 3 div's of the same sizes</h3>
+      <div className="firstDiv" style={{ height: 200, width: 200, backgroundColor: 'red' }}></div>
+      <div className="secondDiv" style={{ height: 200, width: 200, backgroundColor: 'green' }}></div>
+      <div className="thirdDiv" style={{ height: 200, width: 200, backgroundColor: 'blue' }}></div>
+
     </div>
   );
 }

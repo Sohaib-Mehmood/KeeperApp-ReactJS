@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.firstdiv{
+  background-color: aqua;
+  height: 200px;
+  width: 200px;
+}
+
+.secondDiv{
+  background-color: blue;
+}
+
+.thirdDiv{
+  background-color: blueviolet;
+}

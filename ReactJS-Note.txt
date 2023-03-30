@@ -18,11 +18,32 @@ ReactJS
 	- each component has its own ( html, css and js ) files in the small chunks, we can have it as many as we want it to be.
 	- each time it refreshes the component, whenever it updates.
 
+import React from "react";
+import ReactDOM from "react-dom";
+
 ReactDOM.render
-	- What to show and where to show it.
+	- What to show and where to show it. (IMPORTANT)
+	- it is responsible for how the UI will look like
+		- Output of this render method is simple, plain JS object
+		- react keeps a light weight representation of the DOM, that is refered as DOM.
+		- whenever we change the state of a component we get a new react element
+		- react will then compare this element and its children with the previous one.
+		- its figures out what is being changed and then it will update the part of the real dom and keep everything in a sync. 
 	- all of this happens with the help of JSX.
 
+	- rendor method can only take one html element, cannot render multiple html tags.
+
 JSX
+	- in jsx we should be following the "camelCase" naming convention.
+	- for applying the css we have to use the javascript objects.
+		- example
+			- const = customeStyle = {
+				color: "red",
+				fontSize: "20px",
+				border: "1px solid black"
+			}
+			customeSytle.color = "blue";
+
 	- it is the core component of react
 	- JSx stands for JavaScript XML, that allow us the write the HTML code in react.
 		- React will internally convert this into a virtual DOM, and will ultimately output out HTML for us.
@@ -32,3 +53,6 @@ JSX
 
 Babel
 	- is a JS compiler, that converts it into the browser compatible JS
+
+Components
+	- 
