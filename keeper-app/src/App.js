@@ -1,7 +1,8 @@
 import './App.css';
 import Heading from './Heading';
 import UList from './ULlist';
-
+import Greetings from './Greeting';
+import * as method from './Calculations';
 
 let name = 'sohaib';
 let currentYear = new Date().getFullYear();
@@ -18,6 +19,9 @@ function App() {
       <div className="firstDiv" style={{ height: 200, width: 200, backgroundColor: 'red' }}></div>
       <div className="secondDiv" style={{ height: 200, width: 200, backgroundColor: 'green' }}></div>
       <div className="thirdDiv" style={{ height: 200, width: 200, backgroundColor: 'blue' }}></div>
+
+      <Greetings/>
+      <p>{method.add(1,2)} is the respective answer.</p>
 
     </div>
   );

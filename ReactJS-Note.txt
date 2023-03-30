@@ -55,4 +55,15 @@ Babel
 	- is a JS compiler, that converts it into the browser compatible JS
 
 Components
-	- 
+	- converting large JS files into small manageable components is what this means.
+	- remember
+		- whenever we are exporting the single-export, we can have it with any name we want to.
+		- but if there are multiple export module from the single file then the name must be same with the original exports.
+			- i.e; (more preferable method of importing the modules)
+				- default export {doublePi, tripplePi};
+				- then in the main file, we have to import it in like:
+					- import PI, {doublePi, tripplePi} from "./math.js";
+		- or we can use the * as well to import everything from that component.
+			- import * as pi from "./math.js"
+			- {pi.doublePi};
+			- {pi.tripplePi};
