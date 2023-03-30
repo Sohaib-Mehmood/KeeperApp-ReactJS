@@ -1,4 +1,3 @@
-import React from "react";
 
 function add(firstNumber, secondNumber){
     return firstNumber+secondNumber;
