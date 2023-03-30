@@ -1,0 +1,34 @@
+ReactJS
+	- JavaScript library to build user interfaces.
+	- Surprisingle, we can make components and use them dynamically for whatever we want to make.
+
+	- we can break down a very complex structure into a component tree.
+	- Example (all of these are components):
+		- App
+			- NavBar
+			- ToDoList
+				- ListItem
+					- CheckBox
+					- ItemText
+
+	- <MyHeader/>
+	- <PageContent/>
+	- <MyFooter/>
+
+	- each component has its own ( html, css and js ) files in the small chunks, we can have it as many as we want it to be.
+	- each time it refreshes the component, whenever it updates.
+
+ReactDOM.render
+	- What to show and where to show it.
+	- all of this happens with the help of JSX.
+
+JSX
+	- it is the core component of react
+	- JSx stands for JavaScript XML, that allow us the write the HTML code in react.
+		- React will internally convert this into a virtual DOM, and will ultimately output out HTML for us.
+
+	- ReactJs is a JS front-end Library, that uses the Virtual DOM.
+	- React application is made up of multiple components, each for outputting small, reusable piece of HTML
+
+Babel
+	- is a JS compiler, that converts it into the browser compatible JS
