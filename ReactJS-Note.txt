@@ -1,8 +1,11 @@
 ReactJS
 	- JavaScript library to build user interfaces.
 	- Surprisingle, we can make components and use them dynamically for whatever we want to make.
+	- React is composed of numerous independent, isolated and resuable components, and then sum up to build complex applications.
 
 	- we can break down a very complex structure into a component tree.
+	- every react application is a tree of components.
+		- having the root component.
 	- Example (all of these are components):
 		- App
 			- NavBar
@@ -67,3 +70,82 @@ Components
 			- import * as pi from "./math.js"
 			- {pi.doublePi};
 			- {pi.tripplePi};
+
+	every component is implemented as a javascript class
+	- and they are having a
+		- state method
+			- state is a component that we want to display when the data is being rendered.
+		- render method
+		- ReactDOM.render(element, location);
+			- responsible for what the UI should look like.
+			- output of this render method is a react element
+				- that is a simple JS object that maps to a DOM element.
+				- it's not a real DOM, rather a copy of DOM in the memory, known as Virtual DOM.
+					- that is the light-weight representation of the DOM in the memory, that is referred as virtual DOM.
+					- it is very cheap to create.
+
+				- when we change the state of the component we get a new react element.
+				- react will then compare it and it's children with the previous one
+				- then it figures out what is being changed and ultimately change that in real DOM.
+				- in this way it will keep the virtual dom in sync with real dom.
+
+Props
+	- allow the users to pass data and arguments to the components
+		- they are very similar just like attributes are being given to the HTML tags.
+	- a parent component can pass aditional information to it's children using props
+		- and therefore children cannot make any changes to the props
+	- props are the read-only and cannot be changed
+
+Using Class Components:
+
+	class Classprops extends Component{
+		render(){
+			return (
+				<div>
+					<h1>
+						hello {this.prop.name} from lahore.
+					</h1>
+				</div>
+			);
+		}
+	}
+
+	class App extends React.Component{
+		render(){
+			return(
+				<div>
+					<ClassProps name = "learner 1x">
+				</div>
+			);
+		}
+	}
+
+	- this.props.children
+		- can be used when the browser doesn't know the input of the child ahead.
+
+using functional components:
+	
+	function FunctionProps(){
+		return (
+			<div>
+				<Classprops name="learner 1">
+			</div>
+		)
+	}
+
+	- rest of it same but we have to pass the props as a parameter to the function.
+
+
+State
+	- typically a state is an object that stores the values of the properties belonging to the component that could change over a period of time
+		- a state can be modified based on the user action or network changes
+		- every time the state of an object changes, React re-renders the component to the browser.
+
+		- the state object is initialized in the browser.
+		- the state object can store multiple properties
+
+		- this.setState() is used to change the value of the state object.
+
+		- setState() function performs a shallow merge between the new and previous states.
+
+		- state holds a data and can chage over time
