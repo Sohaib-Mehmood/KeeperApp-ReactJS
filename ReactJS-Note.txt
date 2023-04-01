@@ -149,3 +149,54 @@ State
 		- setState() function performs a shallow merge between the new and previous states.
 
 		- state holds a data and can chage over time
+
+
+React Router
+	- get rid of the page reloads
+	- means client side rendering (this is because it is so famous)
+
+React Hooks (important)
+	- built-in react functions, they allow us to use the features of the react library
+		- example
+			- life cycle methods
+			- states
+			- context
+
+	- it allows you to use state and other react features without writing a class.
+	- hooks are the functions which "hook into" react state and lifecycle features from fuctional components.
+
+	- we cannot use react hooks in classes
+	- hooks should always be used at the top level of the react functions.
+
+UseState
+	- it is an array that returns 2 items
+		- 1. current data
+		- 2. updated data
+
+	- const App = () => {
+		const state = useState();
+
+		const [count, setCount] = useState(0);
+		const IncNum = () => {
+			setCount(count + 1);
+		};
+
+		return (
+			<>
+				<h1> {count} < /h1>
+				<button onClick={IncNum}> Clikc Me < /button>
+			</>
+		)
+	}
+
+useEffect
+	- useEffect(<function>, <dependency>)
+	- that let you synchronize
+
+Higher Order Functions:
+	- advanced technique in React for reusing Component logic.
+	- a HOC is a function that takes a component and returns a component.
+
+	- const EnhancedComponent = higherOrderComponent(WrapperComponent);
+
+	- transforms a component into another component.
