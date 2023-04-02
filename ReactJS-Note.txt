@@ -168,29 +168,48 @@ React Hooks (important)
 	- it allows you to use state and other react features without writing a class.
 	- hooks are the functions which "hook into" react state and lifecycle features from fuctional components.
 
-	- we cannot use react hooks in classes
-	- hooks should always be used at the top level of the react functions.
+	- important
+		- we cannot use react hooks in classes
+		- hooks should always be used at the top level of the react functions.
 
-UseState
+UseState hook
 	- it is an array that returns 2 items
 		- 1. current data
 		- 2. updated data
 
-	- const App = () => {
-		const state = useState();
+	- example: Increasing Counter
+		- const App = () => {
+			const state = useState();
 
-		const [count, setCount] = useState(0);
-		const IncNum = () => {
-			setCount(count + 1);
-		};
+			const [count, setCount] = useState(0);
+			const IncNum = () => {
+				setCount(count + 1);
+			};
 
-		return (
-			<>
-				<h1> {count} < /h1>
-				<button onClick={IncNum}> Clikc Me < /button>
-			</>
-		)
-	}
+			return (
+				<>
+					<h1> {count} < /h1>
+					<button onClick={IncNum}> Click Me < /button>
+				</>
+			)
+		}
+	- example: update time upon pressing the button.
+		- function App(){
+			const now = new Date().toLocateTimeString();
+			const [time, setTime] = useState(now);
+
+			function updateTime(){
+				const newTime = new Date().toLocateTimeString();
+				setTime(newtime);
+			}
+			
+			return (
+				<div className = "container">
+					<h1> {time} < /h1>
+					<button onClick = {updateTime}> Get Time </button>
+				</div>
+			);
+		}
 
 useEffect
 	- useEffect(<function>, <dependency>)
@@ -211,7 +230,7 @@ Map() function in javascript:
 
 emojiPedia.maps(<Entry />)
 
-function Entry (emohiTerm){
+function Entry (emojiTerm){
 	retrun <Entry
 		key = {emojiPedia.id}
 		emoji = {emojiPedia.emoji}
@@ -219,4 +238,53 @@ function Entry (emohiTerm){
 		description = {emojiPedia.meaning}
 }
 
+Conditional rendering:
+	- it is used too much in the reactJS.
+	- example:
+		- let userIsRegistered = true;
+		- funtionc App(){
+			return (
+				<div className = "conatiner">
+					<Form userIsRegistered={userIsRegistered} />
+				</div>
+			);
+		}
+		export default App;
 
+	- {props.userIsRegistered ? "login" : "Registrer"}
+
+State in ReactJS
+	- for that, we use a variable, let say let temp = 60;
+	- and the UI changes w.r.t the value of that temp.
+
+	- for example: (this is called as declarative programming)
+		- we want to strike through the word. when that item is done.
+		- for example
+			- function App(){
+				var isDone = true;
+				const strikeThrough = {textDecoration: "line-through"};
+
+				return <p style={isDone ? strikeThrough : mull}> Buy Milk < /p>;
+			}
+
+	- for example: (this is called as imperative programming)
+		- document.getElementById("root").style.textDecoration = "line-through";
+		- because all that is done by the side of javaScript, to do something different.
+
+Forms:
+	- function handleChange(event){
+		console.log(event.target.value);
+		setName(event.target.value);
+	}
+	- function handleClick(){
+		setHeading(name);
+	}
+	- <form onSubmit = {handleClick}>
+		<input
+			onChange = {handleChange}
+			type = "text"
+			placeHolder = "What's your name?
+			value = {name}
+		/>
+		<button type = "submit" > submit </button>
+	</form>
