@@ -90,11 +90,14 @@ Components
 				- in this way it will keep the virtual dom in sync with real dom.
 
 Props
+	- In react, attributes are called as the "props".
 	- allow the users to pass data and arguments to the components
 		- they are very similar just like attributes are being given to the HTML tags.
 	- a parent component can pass aditional information to it's children using props
 		- and therefore children cannot make any changes to the props
 	- props are the read-only and cannot be changed
+
+	- We cannot apply css to the custom made components.
 
 Using Class Components:
 
@@ -200,3 +203,20 @@ Higher Order Functions:
 	- const EnhancedComponent = higherOrderComponent(WrapperComponent);
 
 	- transforms a component into another component.
+
+
+
+Map() function in javascript:
+	- 
+
+emojiPedia.maps(<Entry />)
+
+function Entry (emohiTerm){
+	retrun <Entry
+		key = {emojiPedia.id}
+		emoji = {emojiPedia.emoji}
+		name = {emojiPedia.name}
+		description = {emojiPedia.meaning}
+}
+
+
